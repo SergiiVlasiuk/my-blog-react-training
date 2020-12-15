@@ -123,8 +123,8 @@ app.post('/api/articles/:name/comment', (req, res) => {
   }, res)
 })
 
-app.getMaxListeners('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/build/idex.html'))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/build/index.html'))
 })
 
 app.listen(8000, () => console.log('listening on port 8000!'))
